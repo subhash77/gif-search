@@ -1,0 +1,37 @@
+<div id="footer">
+    <div class="footer-top">
+        <div class="left">
+            <span>Sign up and <br>
+                get free content every week.</span>
+            <br>
+            <input type="text" class="email" placeholder="Enter your email...">
+            <br>
+            <button class="btn">Sign Up</button>
+        </div>
+        <div class="right">
+            <span>Browse by categories</span> <br>
+            <div class="categories">
+                <div class="items" *ngFor="let cat of categories">
+                    <a href="#">{{cat}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="left">
+            <a href="#">Affiliates</a> /
+            <a href="#">Contributors</a> /
+            <a href="#">Press/Media</a> /
+            <a href="#">Careers</a> /
+            <a href="#">About</a> /
+            <a href="#">Contact</a><br>
+            <span class="copyright">Copyright &copy; 2018 myCompany All rights reserved.</span>
+          </div>
+          <div class="right">
+              <a href="#"><span class="fa custom-icon fa-wifi"></span></a>
+              <a href="#"><span class="fa custom-icon fa-google-plus fa-lg"></span></a>
+              <a href="#"><span class="fa custom-icon fa-twitter fa-lg"></span></a>
+            <a href="#"><span class="fa custom-icon fa-facebook-f fa-lg"></span></a>
+          </div>
+    </div>
+</div>
