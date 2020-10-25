@@ -1,1 +1,6 @@
-<p>search-result works!</p>
+<div class="main-container">
+    <div class="items" *ngFor="let image of imageData">
+        <img src="{{image.images.downsized.url}}" class="image-alignment">
+    </div>
+    <div class="cus-margin" *ngIf="errorMessage"> {{ errorMessage }} </div>
+</div>

@@ -1,5 +1,4 @@
 #footer {
-  padding: 1% 0;
   .footer-top {
     background-color: #363b3e;
     padding: 0 3%;
@@ -9,7 +8,6 @@
 
     .left {
       width: 45%;
-    //   padding: 1%;
       color: white;
       .email {
         background-color: #363b3e;
@@ -30,8 +28,10 @@
       .btn {
         height: 35px;
         margin: 1% 0;
+        color: white;
       }
     }
+
     .right {
       width: 55%;
       padding: 1%;
@@ -73,23 +73,70 @@
       }
     }
     .right {
-        width: 55%;
-        a{
-            float: right;
-        }
-        .custom-icon {
-            border: 1px solid grey;
-            border-radius: 50%;
-            color: grey;
-            font-size: 14px;
-            height: 35px;
-            line-height: 35px;
-            margin-right: 10px;
-            text-align: center;
-            vertical-align: middle;
-            width: 35px;
-          }
+      width: 55%;
+      a {
+        float: right;
+      }
+      .custom-icon {
+        border: 1px solid grey;
+        border-radius: 50%;
+        color: grey;
+        font-size: 14px;
+        height: 35px;
+        line-height: 35px;
+        margin-right: 10px;
+        text-align: center;
+        vertical-align: middle;
+        width: 35px;
+      }
+    }
+  }
+}
 
+@media (max-width: 768px) {
+  #footer {
+    .footer-top,
+    .footer-bottom {
+      flex-wrap: wrap;
+      .left,
+      .right {
+        width: 100%;
+      }
+      .right {
+        margin-top: 2%;
+      }
+    }
+    .footer-top {
+      .left {
+        .email,
+        .btn {
+          width: 70%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  #footer {
+    .footer-top,
+    .footer-bottom {
+      flex-wrap: wrap;
+      .left,
+      .right {
+        width: 100%;
+      }
+      .right {
+        margin-top: 2%;
+      }
+    }
+    .footer-top {
+      .left {
+        .email,
+        .btn {
+          width: 100%;
+        }
+      }
     }
   }
 }

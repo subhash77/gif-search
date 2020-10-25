@@ -1,0 +1,26 @@
+#container {
+  #header {
+    background: linear-gradient(to bottom, #cc3300 3%, #e26400 98%);
+    height: 190px;
+  }
+
+  #main {
+    background-color: #F7F7F7;
+    min-height: calc(100vh - 400px);
+  }
+  #footer {
+    height: 210px;
+  }
+}
+
+@media (max-width: 480px) {
+  #container {
+    #header {
+      height: 200px;
+    }
+
+    #main {
+      min-height: calc(100vh - 410px);
+    }
+  }
+}

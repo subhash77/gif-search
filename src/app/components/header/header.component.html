@@ -3,16 +3,17 @@
         Gif Search
     </div>
     <div class="input-group">
-        <input type="text" class="input-group-text" placeholder="What are you looking for?">
+        <input type="text" class="input-group-text" placeholder="What are you looking for?" [formControl]="imageSearch"
+            (keydown.enter)="searchGif();false">
         <select class="input-group-select" disabled>
             <option value="Show All">Show All</option>
         </select>
-        <button type="button" class="input-group-button"><i class="fa fa-search"></i></button>
+        <button type="button" class="input-group-button" (click)="searchGif()"><i class="fa fa-search"></i></button>
     </div>
     <div class="search-desc">
         <p class="short-desc">You can search any gif with our search</p>
-        <p class="long-desc">Everything you need for your creative projects
-            ,websites,banners,presentations,magazines and advertising</p>
+        <div class="long-desc">Everything you need for your creative projects, websites, banners, presentations,
+            magazines and advertising.</div>
     </div>
 
 </div>

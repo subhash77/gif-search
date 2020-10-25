@@ -1,15 +1,23 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { SearchService } from 'src/app/services/search.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
+  imageSearch = new FormControl('');
+  constructor(private search: SearchService) {}
 
-  constructor() { }
-
-  ngOnInit(): void {
+  // Get the serach result
+  searchGif() {
+    this.search.fetchImages(this.imageSearch.value).subscribe(
+      (result: any) => {
+        this.search.setSearchData(result);
+      },
+      (err) => console.log('Error occured', err)
+    );
   }
-
 }

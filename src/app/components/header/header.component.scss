@@ -1,9 +1,6 @@
 #header {
   text-align: center;
-  background: linear-gradient(to bottom, #cc3300 3%, #e26400 98%);
   color: white;
-  padding: 1% 0;
-
   .search-title {
     padding-top: 1%;
     font-size: 24px;
@@ -11,6 +8,17 @@
   .input-group {
     margin: 1% 0;
 
+    select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background: transparent;
+      background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+      background-repeat: no-repeat;
+      background-position-x: 100%;
+      background-position-y: 10px;
+      padding: 0 1rem;
+      padding-right: 2rem;
+    }
     .input-group-select:disabled {
       background-color: rgb(227, 238, 244);
       opacity: 0.9;
@@ -19,9 +27,8 @@
       border-bottom-left-radius: 4px;
       border-top-left-radius: 4px;
       padding: 0 0 0 13px;
-      width: 24%;
+      width: 30%;
     }
-
     .input-group-text::placeholder {
       color: rgb(220, 225, 228);
     }
@@ -31,6 +38,7 @@
       border-top-right-radius: 4px;
       color: white;
       width: 44px;
+      cursor: pointer;
     }
     .input-group-text,
     .input-group-select,
@@ -39,13 +47,43 @@
       border: none;
     }
   }
-  .search-desc{
+  .search-desc {
+    margin: 1% 0;
+    font-size: 20px;
+    .long-desc {
+      font-size: 14px;
       margin: 1% 0;
-      font-size: 20px;
-    .long-desc{
-        font-size: 14px;
-        margin: 1% 0;
     }
   }
-  
+}
+
+@media only screen and (max-width: 768px) {
+  #header {
+    .input-group {
+      .input-group-text {
+        width: 50%;
+      }
+    }
+    .search-desc {
+      font-size: 18px;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #header {
+    .input-group {
+      margin: 3% 0;
+      .input-group-text {
+        width: 50%;
+      }
+    }
+    .search-desc {
+      margin: 3% 0;
+      font-size: 18px;
+      .long-desc {
+        margin: 3% 0;
+      }
+    }
+  }
 }

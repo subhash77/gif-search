@@ -1,0 +1,32 @@
+.main-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  padding: 3%;
+  .items {
+    width: 33.33%;
+    padding: 0.5% 0.5%;
+    img {
+      width: 99%;
+      height: 200px;
+    }
+  }
+  .cus-margin {
+    margin: 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    .items {
+      width: 50%;
+      padding: 1%;
+      img {
+        width: 98%;
+        height: 150px;
+      }
+    }
+  }
+}
